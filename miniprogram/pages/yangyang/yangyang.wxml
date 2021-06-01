@@ -1,0 +1,22 @@
+<!--pages/yangyang.wxml-->
+<view>
+  <view class="title">个人介绍(求介绍蓝朋友)</view>
+  <van-cell-group>
+    <van-cell title="微信" value="yuyangyang2002" />
+    <van-cell title="电话号码" value="18867111800"   />
+    <van-cell title="性别" value="女"   />
+    <van-cell title="爱好" value="男"   />
+  </van-cell-group>
+  <swiper class="swiper_my" indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+            <view class="swiper-item ">
+              <image src="{{item}}"></image>
+            </view>
+          </swiper-item>
+        </block>
+  </swiper>
+  <view class="welcome">欢迎小哥哥们给我打分！</view>
+  <van-rate size="{{ 40 }}" allow-half  value="{{ value }}" bind:change="onChange" />
+</view>

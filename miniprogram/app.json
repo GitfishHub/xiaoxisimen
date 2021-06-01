@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/yangyang/yangyang",
+    "pages/chuanchuan/chuanchuan",
+    "pages/jingjing/jingjing",
+    "pages/dongdong/dongdong"
+  ],
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#4da9ff",
+    "borderStyle": "black",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/yangyang/yangyang",
+        "text": "洋",
+        "iconPath": "images/find@2x.png",
+        "selectedIconPath": "images/find_active@2x.png"
+      },
+      {
+        "pagePath": "pages/jingjing/jingjing",
+        "text": "靖",
+        "iconPath": "images/shopping@2x.png",
+        "selectedIconPath": "images/shopping_active@2x.png"
+      },
+      {
+        "pagePath": "pages/chuanchuan/chuanchuan",
+        "text": "川",
+        "iconPath": "images/buycar@2x.png",
+        "selectedIconPath": "images/buycar_active@2x.png"
+      },
+      {
+        "pagePath": "pages/dongdong/dongdong",
+        "text": "栋",
+        "iconPath": "images/mine@2x.png",
+        "selectedIconPath": "images/mine_active@2x.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-action-sheet": "@vant/weapp/action-sheet/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-switch": "@vant/weapp/switch/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

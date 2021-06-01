@@ -1,0 +1,19 @@
+/* pages/yangyang.wxss */
+.title{
+  font-size: 50rpx;
+  margin: 50rpx 0;
+  text-align: center;
+}
+.title:hover{
+  color: greenyellow;
+}
+.welcome{
+  margin: 50rpx 36rpx;
+  font-size: 40rpx;
+  color: red;
+}
+.swiper_my{
+  width: 90%;
+  height: 500rpx;
+  margin: 0 auto;
+}

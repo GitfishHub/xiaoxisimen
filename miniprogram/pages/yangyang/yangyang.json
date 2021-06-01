@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "俞杨洋",
+  "navigationBarBackgroundColor":"#57C3CB",
+  "navigationBarTextStyle":"white",
+  "backgroundColor":"#57C3CB",
+  "usingComponents": {
+    "van-cell": "@vant/weapp/cell/index",
+    "van-rate": "@vant/weapp/rate/index"
+  }
+}
