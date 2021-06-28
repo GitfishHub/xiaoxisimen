@@ -1,4 +1,4 @@
-// miniprogram/pages/chuanchuan/chuanchuan.js
+// miniprogram/pages/index/index.js
 Page({
 
   /**

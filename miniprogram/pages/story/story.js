@@ -1,4 +1,4 @@
-// miniprogram/pages/jingjing/jingjing.js
+// miniprogram/pages/story/story.js
 Page({
 
   /**

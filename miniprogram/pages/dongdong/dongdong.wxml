@@ -1,2 +1,28 @@
 <!--miniprogram/pages/dongdong/dongdong.wxml-->
-<text>miniprogram/pages/dongdong/dongdong.wxml</text>
+<view class="back">
+  <view style="text-align:center;margin-top:40rpx;">
+    <image style='width:200rpx;height:100rpx' src="./../../images/marray.png"  lazy-load="false" />
+  </view>
+  <view class="box">
+    <view class="title">我们准备结婚啦</view>
+    <view class="title">倒计时!</view>
+    <van-count-down class="daojishi" time="{{ time }}" format="DD 天 HH 时 mm 分 ss 秒" />
+  </view>
+  <view class='content'>
+    <image src='./../../images/background.png' />
+    <view class="little_tilte">Wedding Invitation</view>
+    <view class="name">新郎 && 新娘</view>
+  </view>
+  <view class="address">
+    <view class="address_title">
+      婚礼地址
+    </view>
+    <view class='address_content'>杭州市萧山区进化镇xxx村</view>
+     <view class="address_title">
+      婚礼时间
+    </view>
+    <view class='address_content'>2021年10月1日 星期六 下午6点整</view>
+    <view class='address_end'>如蒙应允,不胜欣喜^-^</view>
+  </view>
+</view>
+

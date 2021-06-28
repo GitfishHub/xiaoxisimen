@@ -1,9 +1,9 @@
 {
   "pages": [
     "pages/yangyang/yangyang",
-    "pages/chuanchuan/chuanchuan",
-    "pages/jingjing/jingjing",
-    "pages/dongdong/dongdong"
+    "pages/dongdong/dongdong",
+    "pages/story/story",
+    "pages/index/index"
   ],
   "tabBar": {
     "color": "#999",
@@ -12,26 +12,20 @@
     "position": "bottom",
     "list": [
       {
-        "pagePath": "pages/yangyang/yangyang",
-        "text": "洋",
-        "iconPath": "images/find@2x.png",
-        "selectedIconPath": "images/find_active@2x.png"
-      },
-      {
-        "pagePath": "pages/jingjing/jingjing",
-        "text": "靖",
-        "iconPath": "images/shopping@2x.png",
-        "selectedIconPath": "images/shopping_active@2x.png"
-      },
-      {
-        "pagePath": "pages/chuanchuan/chuanchuan",
-        "text": "川",
+        "pagePath": "pages/index/index",
+        "text": "主页",
         "iconPath": "images/buycar@2x.png",
         "selectedIconPath": "images/buycar_active@2x.png"
       },
       {
+        "pagePath": "pages/story/story",
+        "text": "故事",
+        "iconPath": "images/find@2x.png",
+        "selectedIconPath": "images/find_active@2x.png"
+      },
+      {
         "pagePath": "pages/dongdong/dongdong",
-        "text": "栋",
+        "text": "我的",
         "iconPath": "images/mine@2x.png",
         "selectedIconPath": "images/mine_active@2x.png"
       }
