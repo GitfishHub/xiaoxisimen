@@ -1,4 +1,5 @@
 {
+  "setting": {},
   "condition": {
     "plugin": {
       "list": []
@@ -20,6 +21,12 @@
         {
           "name": "pages/dongdong/dongdong",
           "pathName": "pages/dongdong/dongdong",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/story/story",
+          "pathName": "pages/story/story",
           "query": "",
           "scene": null
         }

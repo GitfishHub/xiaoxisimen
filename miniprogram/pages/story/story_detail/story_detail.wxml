@@ -1,0 +1,21 @@
+<!--miniprogram/pages/story/story_detail/story_detail.wxml-->
+<view wx:if="{{story.id}}" class="audio_class">
+  <audio
+    id="myAudio"
+    src="{{story.src}}"
+    bindtap='audioClick'
+    bindended="playEnd"
+    name="{{story.id}}"
+    author="{{story.by}}"
+      controls>
+  </audio>
+</view>
+<view class="rich_contnet">
+  <rich-text style="text-indent:28px"  nodes="{{story.content||'暂无资源'}}"></rich-text>
+</view>
+<view class="weixin_code">
+  <image src="./../../../images/weixin_code.jpg" />
+  <view>扫一扫关注公众号洛小鱼的小故事</view>
+  <view>更多睡前故事哄你入睡</view>
+  <view>晚安好梦~</view>
+</view>

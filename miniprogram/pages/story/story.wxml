@@ -1,2 +1,13 @@
-<!--miniprogram/pages/story/story.wxml-->
-<text>miniprogram/pages/story/story.wxml</text>
+
+<!-- <text class="story">故事ing...</text> -->
+<view class="box">
+  <van-tree-select
+    items="{{ items }}"
+    main-active-index="{{ mainActiveIndex }}"
+    active-id="{{ activeId }}"
+    bind:click-nav="onClickNav"
+    bind:click-item="onClickItem"
+  />
+</view>
+
+

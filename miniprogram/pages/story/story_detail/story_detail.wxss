@@ -1,0 +1,18 @@
+.weixin_code {
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  font-size: 26rpx;
+}
+.weixin_code image {
+  width: 200rpx;
+  height: 200rpx;
+}
+.rich_contnet {
+  width: 94%;
+  margin: 40rpx auto;
+}
+.audio_class {
+  text-align: center;
+  margin: 30rpx 0;
+}

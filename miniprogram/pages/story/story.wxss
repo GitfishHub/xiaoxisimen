@@ -1,1 +1,14 @@
 /* miniprogram/pages/story/story.wxss */
+/* .box {
+  width: 96%;
+  margin: 0 auto;
+} */
+.van-tree-select {
+  height: 100vh !important;
+}
+.story {
+  text-align: center;
+  margin: 30rpx 0;
+  font-size: 40rpx;
+  font-weight: 600;
+}

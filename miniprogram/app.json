@@ -3,7 +3,8 @@
     "pages/yangyang/yangyang",
     "pages/dongdong/dongdong",
     "pages/story/story",
-    "pages/index/index"
+    "pages/index/index",
+    "pages/story/story_detail/story_detail"
   ],
   "tabBar": {
     "color": "#999",
@@ -50,7 +51,8 @@
     "van-field": "@vant/weapp/field/index",
     "van-switch": "@vant/weapp/switch/index",
     "van-row": "@vant/weapp/row/index",
-    "van-col": "@vant/weapp/col/index"
+    "van-col": "@vant/weapp/col/index",
+    "van-nav-bar": "@vant/weapp/nav-bar/index"
   },
   "sitemapLocation": "sitemap.json",
   "style": "v2"
