@@ -20,4 +20,5 @@
   text-align: end;
   margin: 20rpx 40rpx 0 0;
   color: red;
+  font-size: 26rpx;
 }
