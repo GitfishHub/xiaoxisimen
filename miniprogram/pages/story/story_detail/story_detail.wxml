@@ -1,5 +1,5 @@
 <!--miniprogram/pages/story/story_detail/story_detail.wxml-->
-<view wx:if="{{story.id}}" class="audio_class">
+<view wx:if="{{story.src}}" class="audio_class">
   <audio
     id="myAudio"
     src="{{story.src}}"
@@ -10,6 +10,7 @@
       controls>
   </audio>
 </view>
+<view class="auth">作者:{{story.auth}}</view>
 <view class="rich_contnet">
   <rich-text style="text-indent:28px"  nodes="{{story.content||'暂无资源'}}"></rich-text>
 </view>

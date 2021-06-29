@@ -107,11 +107,9 @@ Page({
   },
 
   onClickItem({ detail = {} }) {
-    const activeId = this.data.activeId === detail.id ? null : detail.id;
-    this.setData({ activeId });
-    console.log(this.data.activeId)
+    this.setData({ activeId: detail.id });
       wx.navigateTo({
-      url: `/pages/story/story_detail/story_detail?id=${this.data.activeId}`,
+      url: `/pages/story/story_detail/story_detail?id=${detail.id}`,
     }) 
   },
   onLoad: function (options) {

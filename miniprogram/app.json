@@ -13,12 +13,6 @@
     "position": "bottom",
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "text": "主页",
-        "iconPath": "images/buycar@2x.png",
-        "selectedIconPath": "images/buycar_active@2x.png"
-      },
-      {
         "pagePath": "pages/story/story",
         "text": "故事",
         "iconPath": "images/find@2x.png",
@@ -26,9 +20,15 @@
       },
       {
         "pagePath": "pages/dongdong/dongdong",
-        "text": "我的",
+        "text": "邀请函",
         "iconPath": "images/mine@2x.png",
         "selectedIconPath": "images/mine_active@2x.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我的",
+        "iconPath": "images/buycar@2x.png",
+        "selectedIconPath": "images/buycar_active@2x.png"
       }
     ]
   },
@@ -52,7 +52,8 @@
     "van-switch": "@vant/weapp/switch/index",
     "van-row": "@vant/weapp/row/index",
     "van-col": "@vant/weapp/col/index",
-    "van-nav-bar": "@vant/weapp/nav-bar/index"
+    "van-nav-bar": "@vant/weapp/nav-bar/index",
+    "van-transition": "@vant/weapp/transition/index"
   },
   "sitemapLocation": "sitemap.json",
   "style": "v2"

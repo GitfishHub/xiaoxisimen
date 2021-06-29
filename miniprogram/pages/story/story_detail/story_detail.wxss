@@ -16,3 +16,8 @@
   text-align: center;
   margin: 30rpx 0;
 }
+.auth {
+  text-align: end;
+  margin: 20rpx 40rpx 0 0;
+  color: red;
+}

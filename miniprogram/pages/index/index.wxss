@@ -1,1 +1,7 @@
 /* miniprogram/pages/index/index.wxss */
+.home {
+  text-align: center;
+  font-size: 40rpx;
+  margin: 30rpx 0;
+  color: grey;
+}
