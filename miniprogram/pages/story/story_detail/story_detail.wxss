@@ -3,6 +3,7 @@
   position: relative;
   bottom: 0;
   font-size: 26rpx;
+  margin: 30rpx 0;
 }
 .weixin_code image {
   width: 200rpx;

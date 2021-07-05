@@ -1,8 +1,7 @@
 {
   "pages": [
-    "pages/yangyang/yangyang",
-    "pages/dongdong/dongdong",
     "pages/story/story",
+    "pages/dongdong/dongdong",
     "pages/index/index",
     "pages/story/story_detail/story_detail"
   ],

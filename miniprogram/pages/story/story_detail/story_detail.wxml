@@ -10,7 +10,7 @@
       controls>
   </audio>
 </view>
-<view class="auth">作者:{{story.auth}}</view>
+<view wx:if="{{story.auth}}" class="auth">作者:{{story.auth}}</view>
 <view class="rich_contnet">
   <rich-text style="text-indent:28px"  nodes="{{story.content||'暂无资源'}}"></rich-text>
 </view>

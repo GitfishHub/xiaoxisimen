@@ -37,7 +37,7 @@
     "minifyWXSS": true
   },
   "appid": "wx60a91f1841d9928a",
-  "projectname": "marrayMe",
+  "projectname": "story",
   "libVersion": "2.14.1",
   "condition": {
     "search": {
