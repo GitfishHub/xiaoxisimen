@@ -1,5 +1,6 @@
 // miniprogram/pages/story/story_detail/story_detail.js
 import jsonList from './../../../static.js'
+import Http from './../../../http/http.js'
 Page({
   /**
    * 页面的初始数据
@@ -10,13 +11,21 @@ Page({
     isPlaying: false // 是否播放
   },
   init(id) {
-    for (let val of jsonList) {
-      if (val.id == id) {
-        this.setData({
-          story: val
-        })
-      }
-    }
+    Http.postjson('/storys/getdetail', {
+      id
+    }).then((res) => {
+      this.setData({
+        story: res.data
+      })
+    })
+    // console.log(id, 'id')
+    // for (let val of jsonList) {
+    //   if (val.id == id) {
+    //     this.setData({
+    //       story: val
+    //     })
+    //   }
+    // }
   },
   /**
    * 生命周期函数--监听页面加载
