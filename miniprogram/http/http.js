@@ -1,4 +1,5 @@
-const baseurl = 'http://122.112.183.103:3000'
+// const baseurl = 'http://122.112.183.103:3000'
+const baseurl = 'http://192.168.27.132:3000'
 //等待login接口调用
 var app = getApp()
 let inithttp = false

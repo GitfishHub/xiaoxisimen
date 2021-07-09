@@ -17,8 +17,9 @@ Page({
       url: `/pages/story/story_detail/story_detail?id=${detail.id}`
     })
   },
-  init() {
-    Http.get('/storys/getmenu', {}).then((res) => {
+  async init() {
+    await Http.get('/storys/getmenu', {}).then((res) => {
+      console.log(res.data)
       this.setData({
         items: res.data
       })
@@ -29,7 +30,9 @@ Page({
   },
 
   onReady: function () {},
-  onShow: function () {},
+  onShow: function () {
+    // this.init()
+  },
   onHide: function () {},
   onUnload: function () {},
 
