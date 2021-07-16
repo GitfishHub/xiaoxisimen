@@ -11,7 +11,33 @@ Page({
     vertical: false,
     autoplay: true,
     interval: 2000,
-    duration: 500
+    duration: 500,
+    "tabBar": {
+      "color": "#999",
+      "selectedColor": "#4da9ff",
+      "borderStyle": "black",
+      "position": "bottom",
+      "list": [
+        {
+          "pagePath": "pages/story/story",
+          "text": "故事",
+          "iconPath": "images/find@2x.png",
+          "selectedIconPath": "images/find_active@2x.png"
+        },
+        {
+          "pagePath": "pages/dongdong/dongdong",
+          "text": "邀请函",
+          "iconPath": "images/mine@2x.png",
+          "selectedIconPath": "images/mine_active@2x.png"
+        },
+        {
+          "pagePath": "pages/index/index",
+          "text": "我的",
+          "iconPath": "images/buycar@2x.png",
+          "selectedIconPath": "images/buycar_active@2x.png"
+        }
+      ]
+    },
   },
   onChange(event) {
     this.setData({

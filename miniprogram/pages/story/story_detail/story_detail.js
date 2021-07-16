@@ -1,5 +1,4 @@
 // miniprogram/pages/story/story_detail/story_detail.js
-import jsonList from './../../../static.js'
 import Http from './../../../http/http.js'
 Page({
   /**
@@ -18,14 +17,6 @@ Page({
         story: res.data
       })
     })
-    // console.log(id, 'id')
-    // for (let val of jsonList) {
-    //   if (val.id == id) {
-    //     this.setData({
-    //       story: val
-    //     })
-    //   }
-    // }
   },
   /**
    * 生命周期函数--监听页面加载
