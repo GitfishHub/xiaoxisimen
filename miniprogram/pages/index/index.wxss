@@ -1,7 +1,17 @@
 /* miniprogram/pages/index/index.wxss */
-.home {
-  text-align: center;
-  font-size: 40rpx;
-  margin: 30rpx 0;
-  color: grey;
+.box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.game{
+  width: 30%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20rpx 0;
+}
+.game view{
+  margin-top: 20rpx;
 }

@@ -1,13 +1,7 @@
-<!--miniprogram/pages/index/index.wxml-->
-<view class="home">
-  <van-transition show='{{show}}' name="fade-up" > welcome Here!</van-transition>
+
+<view class="box">
+  <view class="game" wx:for="{{list}}" wx:key='index' >
+    <van-icon name="{{item.icon}}" size='50' color='{{item.color}}' />
+    <view>{{item.name}}</view>
+  </view>
 </view>
-<van-switch style="margin:20rpx" checked="{{ checked }}" bind:change="onChange" />
-<van-skeleton title avatar row="3" loading="{{ loading }}" >
-  <van-cell-group>
-    <van-cell title="姓名" value="洛小鱼" />
-    <van-cell title="性别" value="男"   />
-    <van-cell title="年龄" value="95后"   />
-    <van-cell title="简介" value="我不在意多少人听了这些故事,我在意的是认真听完这些故事的人有相同的感受!"  />
-  </van-cell-group>
-</van-skeleton>
