@@ -1,0 +1,6 @@
+<!-- miniprogram/pages/punishment/punishment.wxml -->
+<view class="box">
+  <van-button class="btn" type="warning" size="large" block>男生版</van-button>
+  <view style="width:100%;height:100rpx" />
+  <van-button type="danger" size="large" block>女生版</van-button>
+</view>

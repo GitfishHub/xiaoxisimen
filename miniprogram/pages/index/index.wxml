@@ -1,6 +1,5 @@
-
 <view class="box">
-  <view class="game" wx:for="{{list}}" wx:key='index' >
+  <view data-path='{{item.path}}' bindtap='handleClick' class="game" wx:for="{{list}}" wx:key='index'>
     <van-icon name="{{item.icon}}" size='50' color='{{item.color}}' />
     <view>{{item.name}}</view>
   </view>

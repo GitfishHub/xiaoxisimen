@@ -2,8 +2,10 @@
   "pages": [
     "pages/story/story",
     "pages/dongdong/dongdong",
+    "pages/turntable/turntable",
     "pages/index/index",
-    "pages/story/story_detail/story_detail"
+    "pages/story/story_detail/story_detail",
+    "pages/punishment/punishment"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
