@@ -61,14 +61,13 @@ Page({
     ]
   },
   handleClick({ currentTarget }) {
-    console.log(currentTarget.dataset.path, '111')
     if (currentTarget.dataset.path) {
       wx.navigateTo({
         url: currentTarget.dataset.path
       })
     } else {
       wx.showToast({
-        title: `模块正在开发中,敬请期待~`,
+        title: `模块正在开发中,敬请期待`,
         icon: 'none',
         duration: 2000
       })

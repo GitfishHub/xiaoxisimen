@@ -6,8 +6,7 @@
     "pages/index/index",
     "pages/story/story_detail/story_detail",
     "pages/punishment/punishment",
-    "pages/punishment/lady/lady",
-    "pages/punishment/man/man"
+    "pages/punishment/detail/detail"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

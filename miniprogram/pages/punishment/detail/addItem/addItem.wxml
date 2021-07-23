@@ -1,0 +1,10 @@
+<!-- pages/punishment/detail/addItem/addItem.wxml -->
+<van-popup custom-style="height: 40%" show="{{ show }}" bind:close="onClose">
+  <view class="box">
+    <view class="add">
+      <view>内容:</view>
+      <input value='{{content}}' bindinput="handleInput" style='height:100rpx;' maxlength="10" placeholder-style="color:red;" placeholder="请输入添加的内容" />
+    </view>
+    <van-button bindtap='handleClickadd' type='primary' size='small' class='btn'>添加</van-button>
+  </view>
+</van-popup>

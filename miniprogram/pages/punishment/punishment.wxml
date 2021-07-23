@@ -1,8 +1,10 @@
 <!-- miniprogram/pages/punishment/punishment.wxml -->
 <view class="box">
-  <van-button bindtap='handleClickMan' class="btn" type="warning" size="large" block>
+  <van-button bindtap='handleClickMan' data-type='1' class="btn" type="warning" size="large" block>
     男生版
   </van-button>
   <view style="width:100%;height:100rpx" />
-  <van-button bindtap='handleClickLady' type="danger" size="large" block>女生版</van-button>
+  <van-button bindtap='handleClickMan' data-type='2' type="danger" size="large" block>
+    女生版
+  </van-button>
 </view>

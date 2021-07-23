@@ -3,15 +3,67 @@ Page({
   /**
    * 页面的初始数据
    */
-  data: {},
-  handleClickLady() {
-    wx.navigateTo({
-      url: '/pages/punishment/lady/lady'
-    })
+  data: {
+    manList: [
+      {
+        id: 1,
+        name: '洗碗3天'
+      },
+      {
+        id: 2,
+        name: '录哄睡故事一个'
+      },
+      {
+        id: 3,
+        name: '俯卧撑60个'
+      },
+      {
+        id: 4,
+        name: '承包周末的厨房'
+      },
+      {
+        id: 5,
+        name: '罚款20到基金会'
+      },
+      {
+        id: 6,
+        name: '洗臭袜子3天'
+      }
+    ],
+    ladyList: [
+      {
+        id: 1,
+        name: '按摩15分钟'
+      },
+      {
+        id: 2,
+        name: '录哄睡故事一个'
+      },
+      {
+        id: 3,
+        name: '整理房间1小时'
+      },
+      {
+        id: 4,
+        name: '承包周末的厨房'
+      },
+      {
+        id: 5,
+        name: '罚款20到基金会'
+      },
+      {
+        id: 6,
+        name: '倒垃圾3天'
+      }
+    ]
   },
-  handleClickMan() {
+  handleClickMan({ currentTarget }) {
+    let data =
+      currentTarget.dataset.type == 1
+        ? JSON.stringify(this.data.manList)
+        : JSON.stringify(this.data.ladyList)
     wx.navigateTo({
-      url: '/pages/punishment/man/man'
+      url: `/pages/punishment/detail/detail?girdList=${data}`
     })
   },
   /**

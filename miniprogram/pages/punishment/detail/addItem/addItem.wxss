@@ -1,0 +1,16 @@
+/* pages/punishment/detail/addItem/addItem.wxss */
+.box {
+  width: 90%;
+  margin: 4% auto;
+  border: 2rpx dashed blue;
+  height: 90%;
+}
+.btn button {
+  width: 50%;
+  margin: 40% 0 0 25%;
+}
+.box .add {
+  width: 90%;
+  margin: 30rpx auto;
+  font-size: 30rpx;
+}
