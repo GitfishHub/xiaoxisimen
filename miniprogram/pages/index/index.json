@@ -1,7 +1,8 @@
 {
   "usingComponents": {
     "van-skeleton": "@vant/weapp/skeleton/index",
-    "van-icon": "@vant/weapp/icon/index"
+    "van-icon": "@vant/weapp/icon/index",
+    "van-image": "@vant/weapp/image/index"
   },
   "navigationBarTitleText": "我的"
 }

@@ -1,9 +1,8 @@
 {
   "pages": [
-    "pages/story/story",
-    "pages/dongdong/dongdong",
-    "pages/turntable/turntable",
     "pages/index/index",
+    "pages/story/story",
+    "pages/turntable/turntable",
     "pages/story/story_detail/story_detail",
     "pages/punishment/punishment",
     "pages/punishment/detail/detail"

@@ -7,7 +7,8 @@ Page({
     currentIndex: 0,
     timer: null,
     btn: true,
-    gridList: []
+    gridList: [],
+    type: null
   },
   addList({ detail }) {
     this.data.gridList.push(detail.list)
@@ -33,7 +34,10 @@ Page({
       wx.showToast({
         title: `${this.data.gridList[this.data.currentIndex].name}`,
         icon: 'none',
-        image: './../../../images/cry.png',
+        image:
+          this.data.type == 1
+            ? './../../../images/cry.png'
+            : './../../../images/xiao.png',
         duration: 3000
       })
       this.setData({
@@ -47,7 +51,8 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      gridList: JSON.parse(options.girdList)
+      gridList: JSON.parse(options.girdList),
+      type: options.type
     })
   },
 

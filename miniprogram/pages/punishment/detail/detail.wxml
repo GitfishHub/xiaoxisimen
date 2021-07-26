@@ -1,8 +1,13 @@
+<view style="margin:30rpx;color:red;font-size:32rpx,line-height:40rpx">
+  以下内容都可累加:(征求对方同意的情况下可以欠着)
+</view>
 <view class="gird">
   <view class="{{index==currentIndex?'girditem bg':'girditem'}}" wx:for="{{ gridList }}" wx:key="index">
     {{item.name}}
   </view>
 </view>
-<van-button type='warning' style="margin:50rpx 0" block bindtap='handleClickAdd'>增加惩罚内容</van-button>
+<van-button type='warning' style="margin:50rpx 0" block bindtap='handleClickAdd'>
+  增加{{type==1?'惩罚':'奖励'}}内容
+</van-button>
 <van-button type='primary' block bindtap='handleClickGo'>{{btn?'action':'stop'}}</van-button>
 <addItem bindaddList='addList' id="item" />
