@@ -2,7 +2,7 @@
   以下内容都可累加:(征求对方同意的情况下可以欠着)
 </view>
 <view class="gird">
-  <view class="{{index==currentIndex?'girditem bg':'girditem'}}" wx:for="{{ gridList }}" wx:key="index">
+  <view class="{{index==currentIndex?'girditem bg':'girditem'}}" data-index='{{index}}' wx:for="{{ gridList }}" wx:key="index" bindlongpress='pressDelete'>
     {{item.name}}
   </view>
 </view>

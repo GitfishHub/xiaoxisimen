@@ -7,7 +7,7 @@ Page({
   data: {
     list: [
       {
-        name: '故事',
+        name: '睡前故事',
         color: '#FF8C00',
         icon: 'like',
         path: '/pages/story/story'
@@ -19,25 +19,25 @@ Page({
         icon: 'bag',
         path: '/pages/turntable/turntable'
       },
-      {
-        name: '购物',
-        color: 'red',
-        icon: 'shop-collect'
-      },
+      // {
+      //   name: '购物',
+      //   color: 'red',
+      //   icon: 'shop-collect'
+      // },
       {
         name: '许愿屋',
         color: '	#FF00FF',
         icon: 'point-gift'
       },
       {
-        name: '游戏',
-        color: '#7CFC00',
-        icon: 'fire'
-      },
-      {
         name: '小树洞',
         color: '	#87CEFA',
         icon: 'smile'
+      },
+      {
+        name: '游戏',
+        color: '#7CFC00',
+        icon: 'fire'
       },
       {
         name: '惩罚',
@@ -108,7 +108,6 @@ Page({
           Http.postjson('/users/getcode', {
             code: res.code
           }).then((res) => {
-            console.log(res, 111)
             _this.setData({
               userInfo: res.data
             })
