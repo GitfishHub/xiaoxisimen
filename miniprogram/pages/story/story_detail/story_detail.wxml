@@ -1,18 +1,11 @@
-<!--miniprogram/pages/story/story_detail/story_detail.wxml-->
+<!-- miniprogram/pages/story/story_detail/story_detail.wxml -->
+<van-notice-bar left-icon="volume-o" text="还有大部分的故事还未录音,欢迎投稿,投稿地址bdq0712@163.com,会加上你的署名哦!" />
 <view wx:if="{{story.src}}" class="audio_class">
-  <audio
-    id="myAudio"
-    src="{{story.src}}"
-    bindtap='audioClick'
-    bindended="playEnd"
-    name="{{story.id}}"
-    author="{{story.by}}"
-      controls>
-  </audio>
+  <audio id="myAudio" src="{{story.src}}" bindtap='audioClick' bindended="playEnd" name="{{story.id}}" author="{{story.by}}" controls></audio>
 </view>
 <view wx:if="{{story.auth}}" class="auth">作者:{{story.auth}}</view>
 <view class="rich_contnet">
-  <rich-text style="text-indent:28px"  nodes="{{story.content||'暂无资源'}}"></rich-text>
+  <rich-text style="text-indent:28px" nodes="{{story.content||'暂无资源'}}"></rich-text>
 </view>
 <view class="weixin_code">
   <image src="./../../../images/weixin_code.jpg" />
