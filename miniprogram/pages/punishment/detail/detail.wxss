@@ -4,6 +4,7 @@
   align-items: center;
   flex-wrap: wrap;
   font-size: 30rpx;
+  margin-top: 40rpx;
 }
 .gird .girditem {
   width: 31%;

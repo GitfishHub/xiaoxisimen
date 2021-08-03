@@ -5,7 +5,12 @@
     "pages/turntable/turntable",
     "pages/story/story_detail/story_detail",
     "pages/punishment/punishment",
-    "pages/punishment/detail/detail"
+    "pages/punishment/detail/detail",
+    "pages/game/game",
+    "pages/journal/journal",
+    "pages/journal/write/write",
+    "pages/journal/history/history",
+    "pages/journal/history/detail/detail"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

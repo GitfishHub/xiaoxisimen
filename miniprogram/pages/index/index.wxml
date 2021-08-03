@@ -1,6 +1,6 @@
-<button open-type='getUserInfo' wx:if="{{!userInfo.nick}}" style="margin-top:50rpx;" bindgetuserinfo='handleClickInfo'>
-  获取头像和昵称
-</button>
+<view wx:if="{{!userInfo.nick}}" style="margin:40rpx auto">
+  <van-button bindtap='handleClickInfo'>获取头像和昵称</van-button>
+</view>
 <view wx:else>
   <view style="display:flex;justify-content:center;margin-top:50rpx">
     <van-image round width="6rem" height="6rem" fit="contain" src="{{userInfo.headurl}}" />

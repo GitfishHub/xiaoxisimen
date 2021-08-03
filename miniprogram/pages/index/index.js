@@ -20,24 +20,20 @@ Page({
         path: '/pages/turntable/turntable'
       },
       // {
-      //   name: '购物',
-      //   color: 'red',
-      //   icon: 'shop-collect'
+      //   name: '许愿屋',
+      //   color: '	#FF00FF',
+      //   icon: 'point-gift'
       // },
-      {
-        name: '许愿屋',
-        color: '	#FF00FF',
-        icon: 'point-gift'
-      },
-      {
-        name: '小树洞',
-        color: '	#87CEFA',
-        icon: 'smile'
-      },
+      // {
+      //   name: '小树洞',
+      //   color: '	#87CEFA',
+      //   icon: 'smile'
+      // },
       {
         name: '游戏',
         color: '#7CFC00',
-        icon: 'fire'
+        icon: 'fire',
+        path: '/pages/game/game'
       },
       {
         name: '惩罚',
@@ -54,7 +50,8 @@ Page({
       {
         name: '日志记录',
         color: '#FF69B4',
-        icon: 'column'
+        icon: 'column',
+        path: '/pages/journal/journal'
       },
       {
         name: '敬请期待',
@@ -65,27 +62,32 @@ Page({
     userInfo: {}
   },
   handleClickInfo({ detail }) {
-    Http.postjson('/users/setuserInfo', {
-      id: this.data.userInfo._id,
-      headurl: detail.userInfo.avatarUrl.replace(/132/, '0'),
-      nick: detail.userInfo.nickName
-    }).then((res) => {
-      this.setData({
-        userInfo: res.data
-      })
-      app.globalData.userInfo = this.data.userInfo
-    })
-    // wx.getUserProfile({
-    //   desc: '用于登录使用', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
-    //   success: (res) => {
-    //     let { avatarUrl, nickName } = res.userInfo
-    //     avatarUrl = avatarUrl.replace(/132/, '0')
-    //     console.log(res)
-    //     this.setData({
-    //       userInfo: res.userInfo
-    //     })
-    //   }
+    // console.log(detail, 111)
+    // wx.setStorage({
+    //   key: 'userInfo',
+    //   data: detail.userInfo
     // })
+    // this.setData({
+    //   userInfo: detail.userInfo
+    // })
+    // app.globalData.userInfo = this.data.userInfo
+
+    wx.getUserProfile({
+      desc: '用于登录使用', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
+      success: (res) => {
+        let { avatarUrl, nickName } = res.userInfo
+        avatarUrl = avatarUrl.replace(/132/, '0')
+        Http.postjson('/users/setuserInfo', {
+          id: this.data.userInfo._id,
+          headurl: res.userInfo.avatarUrl.replace(/132/, '0'),
+          nick: res.userInfo.nickName
+        }).then((result) => {
+          this.setData({
+            userInfo: result.data
+          })
+        })
+      }
+    })
   },
   handleClick({ currentTarget }) {
     if (currentTarget.dataset.path) {
@@ -101,11 +103,18 @@ Page({
     }
   },
   wxlogin: function () {
+    // setTimeout(() => {
+    //   if (app.globalData.userInfo) {
+    //     this.setData({
+    //       userInfo: app.globalData.userInfo
+    //     })
+    //   }
+    // }, 100)
     let _this = this
     wx.login({
       success(res) {
         if (res.code) {
-          Http.postjson('/users/getcode', {
+          Http.postjson('/users/getcodebdq', {
             code: res.code
           }).then((res) => {
             _this.setData({
@@ -132,8 +141,8 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-    this.wxlogin()
+  async onShow() {
+    await this.wxlogin()
   },
 
   /**

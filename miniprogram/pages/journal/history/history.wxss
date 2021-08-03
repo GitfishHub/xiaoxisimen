@@ -1,0 +1,10 @@
+/* miniprogram/pages/journal/history/history.wxss */
+.deleteclass {
+  line-height: 44px;
+  text-align: center;
+  color: #fff;
+  background: red;
+  width: 65px;
+  font-size: 30rpx;
+  font-weight: 600;
+}

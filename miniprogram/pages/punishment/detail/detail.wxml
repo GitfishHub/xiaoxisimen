@@ -1,6 +1,4 @@
-<view style="margin:30rpx;color:red;font-size:32rpx,line-height:40rpx">
-  以下内容都可累加:(征求对方同意的情况下可以欠着)
-</view>
+<van-notice-bar left-icon="volume-o" text="以下内容都可累加:(征求对方同意的情况下可以欠着,长按可以删除选项,也可自行添加内容!" />
 <view class="gird">
   <view class="{{index==currentIndex?'girditem bg':'girditem'}}" data-index='{{index}}' wx:for="{{ gridList }}" wx:key="index" bindlongpress='pressDelete'>
     {{item.name}}

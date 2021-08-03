@@ -1,0 +1,8 @@
+<!-- miniprogram/pages/journal/write/write.wxml -->
+<view class="title">
+  <input value='{{title}}' bindinput="handleInputTitle" placeholder="请输入日志题目" />
+</view>
+<view class="content">
+  <textarea value="{{content}}" bindinput="handleInputContent" auto-height placeholder="请输入日志内容" maxlength='99999' />
+</view>
+<van-button type='primary' bindtap='handleClicksub' block>提交日志</van-button>

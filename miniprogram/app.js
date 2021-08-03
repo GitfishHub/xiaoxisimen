@@ -1,6 +1,20 @@
 //app.js
 App({
+  require: function ($uri) {
+    return require($uri)
+  },
   onLaunch: function () {
+    // wx.getStorage({
+    //   key: 'userInfo',
+    //   success: (result) => {
+    //     if (result.data) {
+    //       this.globalData.userInfo = result.data
+    //     }
+    //     if (this.localCallBack) {
+    //       this.localCallBack(this.globalData.userInfo)
+    //     }
+    //   }
+    // })
     // 获取用户信息
     // wx.getSetting({
     //   success: (res) => {

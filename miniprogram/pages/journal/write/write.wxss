@@ -1,0 +1,14 @@
+/* miniprogram/pages/journal/write/write.wxss */
+.title {
+  text-align: center;
+  margin: 40rpx 0 10rpx 0;
+}
+.content {
+  width: 90%;
+  margin: 50rpx auto;
+  border: 4px solid #07c160;
+  padding: 5px;
+}
+.content textarea {
+  width: 100%;
+}

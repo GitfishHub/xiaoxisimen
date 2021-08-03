@@ -165,9 +165,10 @@ Page({
   //得出结果
   addMark(mark) {
     wx.showToast({
-      title: `勇敢牛牛,不怕困难,吃货们给我冲,老子今天要吃${mark}!!!`,
+      title: `${mark}走你!!!`,
       icon: 'none',
-      duration: 4000
+      image: './../../images/xiao.png',
+      duration: 3000
     })
   },
   currinl() {

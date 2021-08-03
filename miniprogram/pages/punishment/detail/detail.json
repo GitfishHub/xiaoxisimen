@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "addItem": "./addItem/addItem"
+    "addItem": "./addItem/addItem",
+    "van-notice-bar": "@vant/weapp/notice-bar/index"
   }
 }

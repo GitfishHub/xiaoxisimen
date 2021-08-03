@@ -1,0 +1,10 @@
+<!-- miniprogram/pages/game/game.wxml -->
+<van-tabs active="A类别游戏">
+  <van-tab wx:for="{{allList}}" wx:key="index" title="{{item.title}}" name="{{item.title}}">
+    <view class="tab">
+      <view bindtap='handleClickPlay' class="{{currentIndex==index?'bgcolor':''}}" wx:for="{{item.list}}" wx:for-item="newItem" data-index='{{index}}' wx:key="index">
+        {{newItem.name}}
+      </view>
+    </view>
+  </van-tab>
+</van-tabs>

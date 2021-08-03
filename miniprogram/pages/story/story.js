@@ -1,4 +1,5 @@
-import Http from './../../http/http.js'
+const app = getApp()
+var Http = app.require('http/http.js')
 Page({
   data: {
     mainActiveIndex: 0,

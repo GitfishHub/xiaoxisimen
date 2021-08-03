@@ -1,3 +1,4 @@
+<van-notice-bar left-icon="volume-o" text="欢迎来到吃货空间,想吃什么自己转,勇敢牛牛不怕困难,给我冲!!!" />
 <view class="index">
   <view class="xian"></view>
   <view class="xian"></view>

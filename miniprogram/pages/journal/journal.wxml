@@ -1,0 +1,6 @@
+<!-- miniprogram/pages/journal/journal.wxml -->
+<view class="box">
+  <van-button bindtap='handleClickWrite' type='primary' block>写日志</van-button>
+  <view style="margin:60rpx" />
+  <van-button bindtap='handleClickHistory' type='warning' block>日志记录</van-button>
+</view>

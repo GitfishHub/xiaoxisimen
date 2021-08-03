@@ -1,5 +1,6 @@
 // miniprogram/pages/story/story_detail/story_detail.js
-import Http from './../../../http/http.js'
+const app = getApp()
+var Http = app.require('http/http.js')
 Page({
   /**
    * 页面的初始数据

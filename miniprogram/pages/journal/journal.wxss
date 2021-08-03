@@ -1,0 +1,4 @@
+/* miniprogram/pages/journal/journal.wxss */
+.box {
+  margin-top: 46%;
+}

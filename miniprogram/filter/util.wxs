@@ -1,0 +1,152 @@
+function formatTime(date) {
+  if (!date) {
+    return ''
+  }
+  var date = getDate(parseInt(date))
+  var year = date.getFullYear()
+  var month = date.getMonth() + 1
+  var day = date.getDate()
+
+  var hour = date.getHours()
+  var minute = date.getMinutes()
+  var second = date.getSeconds()
+  return (
+    [year, month, day].map(formatNumber).join('/') +
+    ' ' +
+    [hour, minute, second].map(formatNumber).join(':')
+  )
+}
+function formatTime2(date) {
+  if (!date) {
+    return ''
+  }
+  var date = getDate(date)
+  var year = date.getFullYear()
+  var month = date.getMonth() + 1
+  var day = date.getDate()
+  var hour = date.getHours()
+  var minute = date.getMinutes()
+  var second = date.getSeconds()
+  return [year, month, day].map(formatNumber).join('.')
+  // + ' ' + [hour, minute, second].map(formatNumber).join(':')
+}
+function gettimebetween(start, end) {
+  var num = end - start
+  var hour = parseInt(num / (1000 * 60 * 60))
+  var day = undefined
+  if (hour > 24) {
+    day = Math.floor(hour / 24)
+    hour = hour - day * 24
+  }
+  if (start && end) {
+    if (day) {
+      return day + '天' + hour + '小时'
+    } else {
+      return hour + '小时'
+    }
+  } else {
+    return ''
+  }
+}
+function getstatus(params) {
+  if (params == 0) {
+    return '报名中'
+    // }else if(params == 1){
+    //   return '进行中'
+  } else if (params == 2) {
+    return '已结束'
+  } else {
+    return '已报名'
+  }
+}
+//首保卡状态
+function firstMaintain(param) {
+  if (param == 200) {
+    return '有效'
+  } else if (param == 403) {
+    return '已使用'
+  } else if (param == 404) {
+    return '已过期'
+  }
+}
+// 价格计算
+function calcPrice(score, price) {
+  console.log('score', score, price)
+  let show = ''
+  if (price) {
+    show = price + '元'
+  }
+  if (score) {
+    show = score + '积分'
+  }
+  return show
+}
+function formatNumber(n) {
+  n = n.toString()
+  return n[1] ? n : '0' + n
+}
+
+function moreToDian(val, num) {
+  if (val) {
+    if (num) {
+      return val.slice(0, num)
+    } else {
+      return val
+    }
+  } else {
+    return '-'
+  }
+}
+function geteight(val) {
+  if (val.length > 8) {
+    return val.slice(0, 7) + '...'
+  } else {
+    return val
+  }
+}
+function orderStatus(orderStatus) {
+  switch (orderStatus) {
+    case 100:
+      return '待付款'
+    case 101:
+      return '已支付定金,等待经销商确认'
+    case 102:
+      return '经销商确认失败'
+    case 103:
+      return '待付尾款'
+    case 200:
+      return '待发货'
+    case 300:
+      return '待确认收货'
+    case 400:
+      return '待评价'
+    case 500:
+      return '已完成'
+    case 601:
+      return '取消订单'
+    case 602:
+      return '取消订单-支付超时取消'
+    case 800:
+      return '申请退换货'
+  }
+}
+function payStatus(payStatus) {
+  if (payStatus == 100) {
+    return '未支付'
+  } else if (payStatus == 101) {
+    return '未支付尾款'
+  } else if (payStatus == 400) {
+    return '已支付'
+  }
+}
+module.exports = {
+  formatTime: formatTime,
+  getstatus: getstatus,
+  formatTime2: formatTime2,
+  gettimebetween: gettimebetween,
+  moreToDian: moreToDian,
+  geteight: geteight,
+  orderStatus: orderStatus,
+  payStatus: payStatus,
+  firstMaintain: firstMaintain
+}
