@@ -12,4 +12,8 @@
     <van-icon name="{{item.icon}}" size='50' color='{{item.color}}' />
     <view>{{item.name}}</view>
   </view>
+  <view wx:if="{{userInfo._id=='6108f3fe0bebd36001764587'}}" data-path='{{specil.path}}' bindtap='handleClick' class="game" >
+    <van-icon name="{{specil.icon}}" size='50' color='{{specil.color}}' />
+    <view>{{specil.name}}</view>
+  </view>
 </view>

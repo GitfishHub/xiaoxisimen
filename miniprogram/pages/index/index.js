@@ -59,6 +59,12 @@ Page({
         icon: 'weapp-nav'
       }
     ],
+    specil:{
+        name: '私有模块',
+        color: '#87CEFA',
+        icon: 'smile',
+        path:'/pages/private/private'
+    },
     userInfo: {}
   },
   handleClickInfo({ detail }) {

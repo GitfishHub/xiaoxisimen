@@ -1,0 +1,8 @@
+<!--miniprogram/pages/private/private.wxml-->
+<van-button type='primary' size='small' bindtap='handleClickAdd' block>添加工作人员信息</van-button>
+<van-index-bar index-list="{{ indexList }}">
+  <view wx:for='{{persionList}}' wx:key="index">
+    <van-index-anchor index="{{item.type}}">{{item.type}}</van-index-anchor>
+    <van-cell wx:for="{{item.list}}" wx:for-item="newItem" title="{{newItem.name}}" value='15968838382' wx:key="index" />
+  </view>
+</van-index-bar>

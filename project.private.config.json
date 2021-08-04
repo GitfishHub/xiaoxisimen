@@ -19,20 +19,26 @@
           "query": ""
         },
         {
-          "name": "pages/dongdong/dongdong",
-          "pathName": "pages/dongdong/dongdong",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/story/story",
-          "pathName": "pages/story/story",
-          "query": "",
-          "scene": null
-        },
-        {
           "name": "pages/index/index",
           "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/punishment/punishment",
+          "pathName": "pages/punishment/punishment",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/punishment/punishment",
+          "pathName": "pages/punishment/punishment",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/private/private",
+          "pathName": "pages/private/private",
           "query": "",
           "scene": null
         }
