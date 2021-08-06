@@ -35,7 +35,16 @@ Page({
     ],
     persionList: []
   },
-
+  handleClickDelete({ currentTarget }) {
+    wx.showModal({
+      title: '提示',
+      content: `是否确认删除人员${currentTarget.dataset.detail.name}的信息?`,
+      success(res) {
+        console.log(res)
+      }
+    })
+  },
+  handleClickEditor() {},
   /**
    * 生命周期函数--监听页面加载
    */
@@ -44,9 +53,21 @@ Page({
       persionList: json
     })
   },
-  handleClickAdd() {
+  handleClickDetail({ currentTarget }) {
     wx.navigateTo({
-      url: '/pages/private/addpersion/addpersion'
+      url: `/pages/private/detailpersion/detailpersion?id=${currentTarget.dataset.id}`
+    })
+  },
+  handleClickAdd({ currentTarget }) {
+    console.log(
+      '%c [ currentTarget ]',
+      'font-size:13px; background:pink; color:#bf2c9f;',
+      currentTarget
+    )
+    wx.navigateTo({
+      url: `/pages/private/addpersion/addpersion?id=${
+        currentTarget.dataset.detail ? currentTarget.dataset.detail.id : ''
+      }`
     })
   },
   /**

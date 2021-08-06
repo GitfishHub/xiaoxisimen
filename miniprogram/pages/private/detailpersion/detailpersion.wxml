@@ -1,0 +1,14 @@
+<!-- miniprogram/pages/private/detailpersion/detailpersion.wxml -->
+<van-cell-group>
+  <van-field label="姓名" readonly value="{{ forData.name }}" />
+  <van-field label="手机号" readonly value="{{ forData.phone }}" />
+  <van-field label="银行卡类型" readonly value="{{ forData.banktype }}" />
+  <van-field label="银行卡号" readonly value="{{ forData.bankcard }}" />
+  <van-field label="身份证" readonly />
+</van-cell-group>
+<view style="margin:20rpx auto;">
+  <image mode='widthFix' src='https://img0.baidu.com/it/u=3281478013,3213043515&fm=26&fmt=auto&gp=0.jpg' />
+</view>
+<view style="margin:0 auto;">
+  <image mode='widthFix' src='https://img0.baidu.com/it/u=3281478013,3213043515&fm=26&fmt=auto&gp=0.jpg' />
+</view>

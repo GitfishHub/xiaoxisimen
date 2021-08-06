@@ -1,40 +1,21 @@
-// miniprogram/pages/private/addpersion/addpersion.js
+// miniprogram/pages/private/detailpersion/detailpersion.js
 Page({
   /**
    * 页面的初始数据
    */
   data: {
-    name: '',
-    phone: '',
-    banktype: '',
-    bankcard: '',
-    fileList: []
+    forData: {
+      name: 'bdq',
+      phone: '110',
+      banktype: '中国银行',
+      bankcard: '65489541564646513245'
+    }
   },
-  handleSave() {
-    console.log(this.data)
-  },
-  beforeRead({ detail }) {
-    this.data.fileList.push(detail.file)
-    this.setData({
-      fileList: this.data.fileList
-    })
-  },
-  delete({ detail }) {
-    this.data.fileList.splice(detail.index, 1)
-    this.setData({
-      fileList: this.data.fileList
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    console.log(
-      '%c [ options ]',
-      'font-size:13px; background:pink; color:#bf2c9f;',
-      options
-    )
-  },
+  onLoad: function (options) {},
 
   /**
    * 生命周期函数--监听页面初次渲染完成

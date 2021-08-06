@@ -2,4 +2,11 @@
 <van-cell-group>
   <van-field label="姓名" model:value="{{ name }}" placeholder="请输入用户名" border="{{ false }}" />
   <van-field label="手机号" model:value="{{ phone }}" placeholder="请输入手机号码" border="{{ false }}" />
+  <van-field label="银行卡类型" model:value="{{ banktype }}" placeholder="请输入银行类型(如工商,农业)" border="{{ false }}" />
+  <van-field label="银行卡号" model:value="{{ bankcard }}" placeholder="请输入银行卡号" border="{{ false }}" />
+  <van-field label="请上传身份证正反面" title-width='10' readonly border="{{ false }}" />
 </van-cell-group>
+<view style='width:100%;background:#fff;'>
+  <van-uploader file-list="{{ fileList }}" use-before-read bind:before-read="beforeRead" bind:delete="delete" max-count="2" />
+</view>
+<van-button style='margin-top:40rpx' type='primary' block bindtap='handleSave'>保存</van-button>

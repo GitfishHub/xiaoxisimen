@@ -1,8 +1,19 @@
-<!--miniprogram/pages/private/private.wxml-->
-<van-button type='primary' size='small' bindtap='handleClickAdd' block>添加工作人员信息</van-button>
-<van-index-bar index-list="{{ indexList }}">
+<!-- miniprogram/pages/private/private.wxml -->
+<van-index-bar index-list="{{ indexList }}" style="margin-bottom:150rpx">
   <view wx:for='{{persionList}}' wx:key="index">
     <van-index-anchor index="{{item.type}}">{{item.type}}</van-index-anchor>
-    <van-cell wx:for="{{item.list}}" wx:for-item="newItem" title="{{newItem.name}}" value='15968838382' wx:key="index" />
+    <van-swipe-cell wx:for="{{item.list}}" wx:key="index" wx:for-item="newItem" right-width="{{ 130 }}">
+      <van-cell-group>
+        <van-cell bindtap='handleClickDetail' data-id='{{newItem.id}}' title="{{newItem.name}}" value="15968838382" />
+      </van-cell-group>
+      <view slot="right" style="display:flex">
+        <view class="editor" bindtap='handleClickAdd' data-detail='{{newItem}}'>修改</view>
+        <view class="delete" bindtap='handleClickDelete' data-detail='{{newItem}}'>删除</view>
+      </view>
+    </van-swipe-cell>
+    <!-- <van-cell wx:for="{{item.list}}" wx:for-item="newItem" title="{{newItem.name}}" value='15968838382' wx:key="index" /> -->
   </view>
 </van-index-bar>
+<view class="add">
+  <van-button width='100%' type='primary' bindtap='handleClickAdd'>添加工作人员信息</van-button>
+</view>

@@ -1,1 +1,25 @@
 /* miniprogram/pages/private/private.wxss */
+.delete {
+  text-align: center;
+  background: red;
+  color: #fff;
+  width: 65px;
+  line-height: 44px;
+}
+.editor {
+  text-align: center;
+  background: #07c160;
+  color: #fff;
+  width: 65px;
+  line-height: 44px;
+}
+.add {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 120rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

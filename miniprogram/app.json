@@ -2,6 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/story/story",
+    "pages/yangyang/yangyang",
     "pages/turntable/turntable",
     "pages/story/story_detail/story_detail",
     "pages/punishment/punishment",
@@ -10,7 +11,10 @@
     "pages/journal/journal",
     "pages/journal/write/write",
     "pages/journal/history/history",
-    "pages/journal/history/detail/detail"
+    "pages/journal/history/detail/detail",
+    "pages/private/private",
+    "pages/private/addpersion/addpersion",
+    "pages/private/detailpersion/detailpersion"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
