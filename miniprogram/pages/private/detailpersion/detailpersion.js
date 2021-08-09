@@ -1,21 +1,28 @@
 // miniprogram/pages/private/detailpersion/detailpersion.js
+const app = getApp()
+var Http = app.require('http/http.js')
 Page({
   /**
    * 页面的初始数据
    */
   data: {
-    forData: {
-      name: 'bdq',
-      phone: '110',
-      banktype: '中国银行',
-      bankcard: '65489541564646513245'
-    }
+    forData: {}
   },
-
+  init(id) {
+    Http.post('/uncleinterface/searchuser', { id }).then((res) => {
+      if (res.code == 200) {
+        this.setData({
+          forData: res.data
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {},
+  onLoad: function (options) {
+    this.init(options.id)
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

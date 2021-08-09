@@ -1,5 +1,7 @@
 // miniprogram/pages/private/private.js
-import json from './public.js'
+import pinyin from './../../filter/Convert_Pinyin.js'
+const app = getApp()
+var Http = app.require('http/http.js')
 Page({
   /**
    * 页面的初始数据
@@ -36,34 +38,58 @@ Page({
     persionList: []
   },
   handleClickDelete({ currentTarget }) {
+    let _this = this
     wx.showModal({
       title: '提示',
       content: `是否确认删除人员${currentTarget.dataset.detail.name}的信息?`,
-      success(res) {
-        console.log(res)
+      success(result) {
+        if (result.confirm) {
+          Http.post('/uncleinterface/deluser', {
+            id: currentTarget.dataset.detail.id
+          }).then((res) => {
+            if (res.code == 200) {
+              _this.init()
+            }
+          })
+        }
       }
     })
   },
-  handleClickEditor() {},
+  init() {
+    let list = new Array(26)
+    this.data.indexList.forEach((element, index) => {
+      list[index] = {
+        type: element,
+        list: []
+      }
+    })
+    Http.get('/uncleinterface/userlist').then((res) => {
+      if (res.code == 200) {
+        res.data.forEach((ele) => {
+          let firstName = pinyin.getCamelChars(ele.name).substring(0, 1)
+          let index = this.data.indexList.indexOf(firstName)
+          list[index].list.push({
+            id: ele._id,
+            name: ele.name,
+            phone: ele.phone
+          })
+        })
+      }
+      this.setData({
+        persionList: list
+      })
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    this.setData({
-      persionList: json
-    })
-  },
+  onLoad: function (options) {},
   handleClickDetail({ currentTarget }) {
     wx.navigateTo({
       url: `/pages/private/detailpersion/detailpersion?id=${currentTarget.dataset.id}`
     })
   },
   handleClickAdd({ currentTarget }) {
-    console.log(
-      '%c [ currentTarget ]',
-      'font-size:13px; background:pink; color:#bf2c9f;',
-      currentTarget
-    )
     wx.navigateTo({
       url: `/pages/private/addpersion/addpersion?id=${
         currentTarget.dataset.detail ? currentTarget.dataset.detail.id : ''
@@ -78,7 +104,9 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {},
+  onShow: function () {
+    this.init()
+  },
 
   /**
    * 生命周期函数--监听页面隐藏

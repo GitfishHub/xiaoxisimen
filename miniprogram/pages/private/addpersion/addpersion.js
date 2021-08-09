@@ -1,4 +1,6 @@
 // miniprogram/pages/private/addpersion/addpersion.js
+const app = getApp()
+var Http = app.require('http/http.js')
 Page({
   /**
    * 页面的初始数据
@@ -8,10 +10,33 @@ Page({
     phone: '',
     banktype: '',
     bankcard: '',
+    id: '',
     fileList: []
   },
   handleSave() {
-    console.log(this.data)
+    if (this.data.name && this.data.phone) {
+      let url = this.data.id
+        ? '/uncleinterface/rewriteuser'
+        : '/uncleinterface/adduser'
+      Http.post(url, this.data).then((res) => {
+        if (res.code == 200) {
+          wx.showToast({
+            title: `保存成功`,
+            icon: 'none',
+            duration: 2000
+          })
+          setTimeout(() => {
+            wx.navigateBack()
+          }, 2100)
+        }
+      })
+    } else {
+      wx.showToast({
+        title: `请输入名字和手机号`,
+        icon: 'none',
+        duration: 2000
+      })
+    }
   },
   beforeRead({ detail }) {
     this.data.fileList.push(detail.file)
@@ -29,11 +54,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(
-      '%c [ options ]',
-      'font-size:13px; background:pink; color:#bf2c9f;',
-      options
-    )
+    if (options.id) {
+      Http.post('/uncleinterface/searchuser', { id: options.id }).then(
+        (res) => {
+          if (res.code == 200) {
+            this.setData({
+              name: res.data.name,
+              phone: res.data.phone,
+              banktype: res.data.banktype,
+              bankcard: res.data.bankcard,
+              id: options.id
+            })
+          }
+        }
+      )
+    }
   },
 
   /**
